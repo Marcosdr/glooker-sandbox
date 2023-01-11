@@ -32,6 +32,27 @@ Test the connection to the CTL bucket. You should see a json output.
 gsutil acl get gs://heroes-viz
 ```
 
+### Visualization Development Workflow
+
+1. Update the configuration. 
+   
+   - Make changes to `index.json`.
+   - Then run: `npm run update_message`
+   - The visualization gets deployed to the storage bucket (dev or prod)
+   - Add this visualization to Looker Studio.
+
+2. Update local message.
+
+    Copy the message that displays on the dashboard with the local message content into `localMessage.js`. 
+    This will be injected into the `data` variable in index.js. To view it, type `console.log(data)` in `index.js`.
+   
+3. Develop locally
+4. Deploy visualization
+
+    Run: `npm run build:dev && npm run push:dev`
+
+    For prod run: `npm run build:prod && npm run push:prod`
+    This will add caching and minified js features to the chart.
 
 ## Bugs and other reports
 
