@@ -32,3 +32,21 @@ Test the connection to the CTL bucket. You should see a json output.
 gsutil acl get gs://heroes-viz
 ```
 
+
+## Bugs and other reports
+
+### dscc-gen
+The latest dscc-gen tool is broken, see link to how to resolve the issue [here](https://github.com/googledatastudio/tooling/issues/190#issuecomment-784799968).
+
+Copy the `node_modules/@google/dscc-scripts/build/viz/util.js` file from the chart project into the node_modules folder for any other viz and replace the bucket paths to use the appropriate paths.
+
+```
+const devBucket = "gs://herores-viz/dev/chart" // process.env.npm_package_dsccViz_gcsDevBucket;
+    if (devBucket === undefined) {
+        throw util_1.invalidVizConfig('gcsDevBucket');
+    }
+    const prodBucket = "gs://herores-viz/prod/chart" // process.env.npm_package_dsccViz_gcsProdBucket;
+    if (prodBucket === undefined) {
+        throw util_1.invalidVizConfig('gcsProdBucket');
+    }
+```
