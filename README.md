@@ -32,6 +32,16 @@ Test the connection to the CTL bucket. You should see a json output.
 gsutil acl get gs://heroes-viz
 ```
 
+### Commands Cheat Sheet
+
+Description                   | Command                                   |
+----------------------------- | ----------------------------------------- |
+Develop - Watch for changes   | `npm run start`                           |
+Update configuration          | `npm run update_message`                  |
+Build and deploy [`Dev`]      | `npm run build:dev && npm run push:dev`   |
+Build and deploy [`Prod`]     | `npm run build:prod && npm run push:prod` |
+
+
 ### Visualization Development Workflow
 
 1. Update the configuration. 

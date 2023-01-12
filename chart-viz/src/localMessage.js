@@ -8,24 +8,24 @@ export const message = {
   tables: {
     DEFAULT: [
       {
-        dimID: ['25-54'],
-        metricID: [128863172],
+        dimID: ['25-80'],
+        metricID: [10],
       },
       {
         dimID: ['0-14'],
-        metricID: [61175933],
+        metricID: [3],
       },
       {
         dimID: ['65+'],
-        metricID: [51055052],
+        metricID: [20],
       },
       {
         dimID: ['15-24'],
-        metricID: [43351778],
+        metricID: [5],
       },
       {
         dimID: ['55-64'],
-        metricID: [42179856],
+        metricID: [42],
       },
     ],
   },
