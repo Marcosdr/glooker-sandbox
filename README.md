@@ -42,6 +42,27 @@ Build and deploy [`Dev`]      | `npm run build:dev && npm run push:dev`   |
 Build and deploy [`Prod`]     | `npm run build:prod && npm run push:prod` |
 
 
+### Create a new visualization
+
+1. Create a vis folder, and inside add `dev` and `prod` directories on your google bucket. for example: 
+   * gs://my-custom-viz/dev/
+   * gs://my-custom-viz/prod/
+
+- Add Local tegion rather than Multi-region
+- Clase predeterminada escoge `standard`
+- Accesso a objetos elige `preciso`. Sino el cli no funcionara bien despues. Uncheck prevencion de acceso publico.
+- Herramientas de proteccion `ninguno`
+
+2. Run the visualization generation command and follow the instructions.
+
+```sh
+npx @google/dscc-gen viz
+```
+
+3. Copy the node_modules/@google/dscc-scripts/build/viz/util.js file from the chart project into the node_modules folder for any other viz and replace the bucket paths to use the appropriate paths.
+
+4. Run `npm run start`
+
 ### Visualization Development Workflow
 
 1. Update the configuration. 
@@ -69,7 +90,14 @@ Build and deploy [`Prod`]     | `npm run build:prod && npm run push:prod` |
 ### dscc-gen
 The latest dscc-gen tool is broken, see link to how to resolve the issue [here](https://github.com/googledatastudio/tooling/issues/190#issuecomment-784799968).
 
-Copy the `node_modules/@google/dscc-scripts/build/viz/util.js` file from the chart project into the node_modules folder for any other viz and replace the bucket paths to use the appropriate paths.
+Copy the file: 
+`node_modules/@google/dscc-scripts/build/viz/util.js`
+From the chart project into the node_modules folder for any other viz and replace the bucket paths to use the appropriate paths.
+
+Replace the build.js and message.js file also:
+`node_modules/@google/dscc-scripts/build/viz/build.js`
+`node_modules/@google/dscc-scripts/build/viz/message.js` 
+
 
 ```
 const devBucket = "gs://herores-viz/dev/chart" // process.env.npm_package_dsccViz_gcsDevBucket;

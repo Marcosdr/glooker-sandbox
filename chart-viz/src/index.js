@@ -6,10 +6,8 @@ const local = require('./localMessage.js');
 
 // write viz code here
 const drawViz = (data) => {
-  font.load({
-    family: 'Oswald',
-    effect: 'neon'
-  });
+  //font.load("https://fonts.cdnfonts.com/css/cartoonist-kooky");
+  font.load("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
   viz.readmeViz();
   chart.draw();
   //viz.firstViz(data);
