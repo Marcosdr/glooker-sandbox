@@ -1,0 +1,24 @@
+{
+  "name": "Google Fonts",
+  "organization": "CTL",
+  "description": "Google Fonts visualization package.",
+  "logoUrl": "https://logo",
+  "organizationUrl": "https://url",
+  "supportUrl": "https://url",
+  "privacyPolicyUrl": "https://url",
+  "termsOfServiceUrl": "https://url",
+  "packageUrl": "https://url",
+  "devMode": true,
+  "components": [
+    {
+      "name": "gfonts",
+      "description": "Google Fonts Text Visualization",
+      "iconUrl": "https://url",
+      "resource": {
+        "js": "gs://gfonts-viz/dev/index.js",
+        "config": "gs://gfonts-viz/dev/index.json",
+        "css": "gs://gfonts-viz/dev/index.css"
+      }
+    }
+  ]
+}
