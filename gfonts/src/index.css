@@ -1,8 +1,28 @@
 body {
-  font-family: Roboto;
+  font-family: Luckiest Guy !important;
 }
 
 code {
   background-color: #fdf6e3;
   color: #586e75;
+}
+
+div.heading {
+  font-size: 29px;
+  margin-bottom: 20px;
+}
+
+div.paragraph {
+  font-family: 'Comfortaa', cursive;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+div.section {
+  font-size: 14px;
+}
+
+div.content {
+  font-size: 13px;
+  margin-bottom: 10px;
 }

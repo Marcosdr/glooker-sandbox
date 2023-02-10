@@ -47,5 +47,22 @@ export const message = {
       },
     ],
   },
-  style: {},
+  style: {
+    title: {
+      defaultValue: "This is the page title",
+      value: ""
+    },
+    section: {
+      defaultValue: "This is a survey question",
+      value: ""
+    },
+    content: {
+      defaultValue: "This is general text content",
+      value: ""
+    },
+    paragraph: {
+      defaultValue: "This is paragraph text content",
+      value: ""
+    }
+  },
 };

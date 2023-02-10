@@ -25,5 +25,36 @@
       ]
     }
   ],
-  "style": [ ]
+  "style": [
+    {
+      "id": "text",
+      "label": "Text",
+      "elements": [
+        {
+          "id": "title",
+          "label": "Page title",
+          "type": "TEXTINPUT",
+          "defaultValue": ""
+        },
+        {
+          "id": "section",
+          "label": "Survey question",
+          "type": "TEXTINPUT",
+          "defaultValue": ""
+        },
+        {
+          "id": "content",
+          "label": "Boxed content",
+          "type": "TEXTAREA",
+          "defaultValue": ""
+        },
+        {
+          "id": "paragraph",
+          "label": "Paragraph",
+          "type": "TEXTAREA",
+          "defaultValue": ""
+        }
+      ]
+    }
+   ]
 }
